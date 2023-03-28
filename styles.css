@@ -1,0 +1,104 @@
+    /*make the background easy on the eyes, by changing the body background-color to #1b1b32.
+     Then, to see the text, change the color to #f5f6f7. */
+body{
+    width: 100%;
+    height: 100vh;/* The vh unit stands for viewport height, and is relative to 1% of the height of the viewport. */
+    /* Now, get rid of the horizontal scroll-bar, by setting the body default margin added by some browsers to 0. */
+    margin:0;
+    background-color: #1b1b32;
+    color:#f5f6f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:16px;
+}
+label{
+    display: block;
+    margin: 0.5rem 0;
+}
+h1 , p{
+    text-align: center;
+    margin: 1em auto;
+}
+    /* Center the form element, by giving it a margin of 0 auto.
+    Then, fix its size to a maximum width of 500px, and a minimum width of 300px. 
+    In between that range, allow it to have a width of 60vw. */
+form{
+    margin:0 auto;
+    max-width: 500px;
+    min-height: 300px;
+    width: 60vw;
+    /* Speaking of padding, the submit button is sitting at the bottom of the form element.
+    Add 2em of padding only to the bottom of the form. */
+    padding-bottom:2em;
+}
+fieldset{
+    border:none;
+    padding:2rem 0;
+    /* To give the fieldset elements a bit of separation,
+    select them and give them a border-bottom of 3px solid #3b3b4f. */
+    border-bottom: 3px solid #3b3b4f;
+}
+    /* The border of the last fieldset element looks a little out of place.
+    You can select the last element of a specific type using the last-of-type CSS pseudo-class, like this:
+    p:last-of-type { }
+    That will select the last p element. Create a new selector that targets the last fieldset element and set its border-bottom to none. */
+fieldset:last-of-type{
+    border-bottom: none;
+    }
+    /*It would be nicer to have the label text appear above the form elements.
+    Select all input, textarea, and select elements, and make them take up the full width of their parent elements.
+    Also, add 10px of margin to the top of the selected elements. Set the other margins to 0.  */
+input , textarea , select {
+    width:100%;
+    margin-top:10px;
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
+    min-height: 2em;
+      }
+    /* Select only the .inline elements, and give them width of unset.
+    This will remove the earlier rule which set all the input elements to width: 100%. */
+    /* If you look close enough, you will notice the .inline elements are too high on the line.
+    To combat this, set the vertical-align property to middle. */
+.inline{
+    width: unset;
+    margin-right: 0.5em;
+    margin-top: 0;
+    margin-bottom:0 ;
+    margin-left:0 ;
+    vertical-align: middle;
+      }
+    /* To make the input and textarea elements blend in with the background theme, set their background-color to #0a0a23.
+    Then, give them a 1px, solid border with a color of #0a0a23. */
+input , textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color:#ffffff;
+    }
+    /* To style the submit button, you can use an attribute selector,
+    which selects an element based on the given attribute value. Here is an example:
+    input[name="password"]
+    The above selects input elements with a name attribute value of password.
+    Now, use the attribute selector to style the submit button with a display of block, and a width of 60%. */
+    /* Lastly, for the submit button, you want to separate it from the fieldset above, and adjust its width to never be below 300px.
+    Change the margin property to include 1em on the top and bottom, while leaving the right and left margins set to auto.
+    Then set the width as described above. */
+input[type="submit"]{
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+}   
+    /* Most browsers inject their own default CSS properties and values for different elements.
+    If you look closely, you might be able to notice the file input is smaller than the other text input elements.
+    By default, a padding of 1px 2px is given to input elements you can type in.
+    Using another attribute selector, style the input with a type of file to be the same padding as the other input elements. */
+input[type="file"]{
+    padding:1px 2px;
+}
+a{
+    color:#dfdfe2;
+  }
